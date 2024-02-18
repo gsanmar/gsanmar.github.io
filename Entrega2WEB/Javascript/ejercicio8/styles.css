@@ -1,0 +1,19 @@
+body {
+  background-color: #f0f0f0;
+}
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+button.btn-custom {
+  border: 2px solid blue;
+  color: blue;
+  background-color: white;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 20px;
+}
+button.btn-custom:hover {
+  background-color: blue;
+  color: white;
+}

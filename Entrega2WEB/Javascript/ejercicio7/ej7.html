@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    
+    .error-message {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center">
+    <h2>Registro</h2>
+    <form id="registroForm" class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-sm-6 form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+          <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+        </div>
+        <div class="col-sm-6 form-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
+          <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-sm-6 form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+          <div class="invalid-feedback">Por favor, ingrese su correo electrónico válido.</div>
+        </div>
+        <div class="col-sm-6 form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" required>
+          <div class="invalid-feedback">Por favor, ingrese su número de teléfono válido.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+  </div>
+
+  <!-- Agregar Bootstrap JS y jQuery (necesarios para la validación) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        
+        var form = document.getElementById('registroForm');
+        // Validar los campos cuando se envía el formulario
+        form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }, false);
+    })();
+  </script>
+  <a href="../ejercicio10/index.html" class="btn btn-sm btn-primary float">Back</a>
+</body>
+</html>

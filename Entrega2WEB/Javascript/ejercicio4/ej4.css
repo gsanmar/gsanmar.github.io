@@ -1,0 +1,7 @@
+.additional.hidden {
+  display: none;
+}
+
+.additional.visible {
+  display: inline;
+}
